@@ -1,5 +1,6 @@
 #include "Player.h"
 
+
 void Player::initPlayer(float posX,float posY) {
 	charactorPlayer.loadFromFile("res/pic/C2.png");
 	player.setSize(sf::Vector2f(150.f, 150.f));
@@ -11,6 +12,10 @@ void Player::initPlayer(float posX,float posY) {
 
 	player.setTextureRect(sf::IntRect(TextureSize.x * currentX , TextureSize.y * currentY, TextureSize.x , TextureSize.y));
 	player.setPosition(posX, posY);
+
+    aimPlayer.setRadius(1.0f);
+    aimPlayer.setFillColor(sf::Color::Red);
+    
 }
 
 void Player::PlayerControl()
@@ -58,19 +63,26 @@ void Player::PlayerControl()
         float V = ((abs(moveX) + abs(moveY))/(float)2) ;
         leng = sqrt(vec.x * vec.x + vec.y * vec.y);
         if (leng != 0) {
-            speed = abs(V / leng);
+            vectorSpeed = abs(V / leng);
         }
 
-        player.move(moveX * (1-speed) * .2f, moveY * (1 - speed) * .2f);
+        player.move(moveX * (1- vectorSpeed) * .2f * speed, moveY * (1 - vectorSpeed) * .2f * speed);
+
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+
+            //aimPlayer.setPosition(player.getPosition().x, player.getPosition().y);
+            //std::cout << aimPlayer.getPosition().x << " " << aimPlayer.getPosition().y << std::endl;
+        }
+
         moveX = 0;
         moveY = 0;
         leng = 0;
-        speed = 1;
+        vectorSpeed = 1;
         switchAnimationState = 1;
+
     }
        
 }
-
 
 void Player::PlayerAnimation(float deltaTime) {
 
@@ -104,3 +116,71 @@ void Player::PlayerAnimation(float deltaTime) {
     }
     switchAnimationState = false;
 }
+
+
+
+
+void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
+        
+    if (getTimeDelay >= 100.0f) {
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+            for (int j = 0; j < numBullet; j++) {
+                //std::cout << "Y" << std::endl;  
+                    if (B[j].state == false) {
+                        getTimeDelay = delayShoot.restart().asMilliseconds();
+                        B[j].currVelocity = B[j].aimDirNorm;
+                        B[j].bulletShape.setPosition(playerCenter);
+                        B[j].state = true;
+                        break;
+                    }
+            }
+        }
+            
+    }getTimeDelay = delayShoot.getElapsedTime().asMilliseconds();
+
+        for (int j = 0; j < numBullet; j++) {
+            if (B[j].state == true)
+                B[j].bulletShape.move(B[j].currVelocity.x * B[j].maxSpeed, B[j].currVelocity.y * B[j].maxSpeed);
+        }
+
+
+        //get bullet Direction
+        for (int j = 0; j < numBullet; j++) {
+            
+            B[j].bulletShape.setRadius(10.0f);
+            B[j].bulletShape.setFillColor(sf::Color::Red);
+            //aimPlayer.setPosition(player.getPosition().x + (player.getSize().x / 6.0f), player.getPosition().y + (player.getSize().y / 6.0f));
+
+            //playerCenter = sf::Vector2f(aimPlayer.getPosition().x + aimPlayer.getRadius(), aimPlayer.getPosition().y + aimPlayer.getRadius());
+            playerCenter = sf::Vector2f(player.getPosition().x + player.getSize().x/2, player.getPosition().y + player.getSize().y / 2);
+
+            MousePositonWindow = MousePos;
+            B[j].aimDir = MousePositonWindow - playerCenter;
+            B[j].aimDirNorm = B[j].aimDir / sqrt(B[j].aimDir.x * B[j].aimDir.x + B[j].aimDir.y * B[j].aimDir.y);
+        }
+
+        
+        for (int j = 0; j < numBullet; j++) {
+
+            // out display
+            if ((B[j].bulletShape.getPosition().x <= 0 || B[j].bulletShape.getPosition().x >= 1920 ||
+                B[j].bulletShape.getPosition().y <= 0 || B[j].bulletShape.getPosition().y >= 1080)
+                && B[j].state == true) {
+                B[j].currVelocity.x = 0;
+                B[j].currVelocity.y = 0;
+                B[j].state = false;
+            }
+
+            // bullet collision
+            
+        }
+}
+
+
+
+/*(B[j].bulletShape.getPosition().x >= enemyPosX && B[j].bulletShape.getPosition().x <= enemyPosX + sizeEnemyX &&
+    B[j].bulletShape.getPosition().y >= enemyPosY && B[j].bulletShape.getPosition().y <= enemyPosY + sizeEnemyY) && B[j].state == true
+
+    */
+
+

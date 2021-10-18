@@ -4,6 +4,7 @@ class game
 {
 
 public :
+
 	void run();
 };
 
