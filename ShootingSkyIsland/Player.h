@@ -14,10 +14,13 @@ public:
 	sf::Clock playerClock,delayShoot;
 	sf::Vector2f vec;
 
+	// player status
+	int weaponSelect = 0;
 	float speed = 1;
 	float vectorSpeed;
 	float leng;
 	float moveX, moveY;
+	float hp = 3;
 	
 
 	int currentX=0,currentY=0;
@@ -34,6 +37,14 @@ public:
 	sf::Vector2f playerCenter;
 	int nBullet=0;
 
+
+	struct Heart {
+		sf::CircleShape bulletShape;
+		bool state = false;
+	};
+	Heart HP[5];
+
+
 	struct bullet {
 		sf::CircleShape bulletShape;
 		sf::Vector2f aimDir;
@@ -46,6 +57,7 @@ public:
 
 public :
 	void initPlayer(float posX,float posY);
+	void HpPlayer();
 	void PlayerControl();
 	void PlayerAnimation(float deltaTime);
 	void UpdateBullet(sf::Vector2f MousePos,int numBullet);

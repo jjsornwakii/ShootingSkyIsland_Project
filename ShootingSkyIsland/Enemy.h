@@ -35,13 +35,14 @@ public:
 
 		float hpEnemy = 500.0f;
 		bool EnemyState =false;
+		bool EnemyMoveState = false;
 	};
 
 	enemy E[5];
 
 	void initEnimy(int i);
 	void setSpawn(float x,float y,int i);
-	void EnemyMove(sf::Vector2f PlayerPos,int nEnemy);
+	void EnemyMove(sf::Vector2f PlayerPos,int nEnemy,int i);
 	void EnemyAnimation(float deltaTime,int nEnemy);
 
 };

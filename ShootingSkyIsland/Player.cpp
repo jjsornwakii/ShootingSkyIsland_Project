@@ -2,8 +2,8 @@
 
 
 void Player::initPlayer(float posX,float posY) {
-	charactorPlayer.loadFromFile("res/pic/C2.png");
-	player.setSize(sf::Vector2f(150.f, 150.f));
+	charactorPlayer.loadFromFile("res/pic/Player2.png");
+	player.setSize(sf::Vector2f(110.f, 150.f));
 	player.setTexture(&charactorPlayer);
 
 	TextureSize = charactorPlayer.getSize();
@@ -36,7 +36,7 @@ void Player::PlayerControl()
 
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) {
-            if (player.getPosition().y < 860) {
+            if (player.getPosition().y < 750) {
                 moveY += 1;
                 vec.y -= 1;
             }
@@ -44,7 +44,7 @@ void Player::PlayerControl()
 
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) {
-            if (player.getPosition().x > 0.0f) {
+            if (player.getPosition().x > 120.0f) {
                 moveX -= 1;
                 vec.x += 1;
             }
@@ -52,7 +52,7 @@ void Player::PlayerControl()
 
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) {
-            if (player.getPosition().x < 1780.0f) {
+            if (player.getPosition().x < 1580.0f) {
                 moveX += 1;
                 vec.x -= 1;
             }
@@ -134,6 +134,14 @@ void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
                         break;
                     }
             }
+
+            if (sf::Mouse::getPosition().x > player.getPosition().x)
+                currentY = 2;
+            else
+                currentY = 1;
+
+            player.setTextureRect(sf::IntRect(TextureSize.x * currentX, TextureSize.y * currentY, TextureSize.x, TextureSize.y));
+
         }
             
     }getTimeDelay = delayShoot.getElapsedTime().asMilliseconds();
@@ -146,17 +154,24 @@ void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
 
         //get bullet Direction
         for (int j = 0; j < numBullet; j++) {
-            
+
             B[j].bulletShape.setRadius(10.0f);
             B[j].bulletShape.setFillColor(sf::Color::Red);
-            //aimPlayer.setPosition(player.getPosition().x + (player.getSize().x / 6.0f), player.getPosition().y + (player.getSize().y / 6.0f));
-
-            //playerCenter = sf::Vector2f(aimPlayer.getPosition().x + aimPlayer.getRadius(), aimPlayer.getPosition().y + aimPlayer.getRadius());
-            playerCenter = sf::Vector2f(player.getPosition().x + player.getSize().x/2, player.getPosition().y + player.getSize().y / 2);
-
+            
+            playerCenter = sf::Vector2f(player.getPosition().x + player.getSize().x / 2, player.getPosition().y + player.getSize().y / 2);
             MousePositonWindow = MousePos;
-            B[j].aimDir = MousePositonWindow - playerCenter;
-            B[j].aimDirNorm = B[j].aimDir / sqrt(B[j].aimDir.x * B[j].aimDir.x + B[j].aimDir.y * B[j].aimDir.y);
+            if (weaponSelect==0) {
+                
+                //aimPlayer.setPosition(player.getPosition().x + (player.getSize().x / 6.0f), player.getPosition().y + (player.getSize().y / 6.0f));
+
+                //playerCenter = sf::Vector2f(aimPlayer.getPosition().x + aimPlayer.getRadius(), aimPlayer.getPosition().y + aimPlayer.getRadius());
+                
+                
+                B[j].aimDir = MousePositonWindow - playerCenter;
+                B[j].aimDirNorm = B[j].aimDir / sqrt(B[j].aimDir.x * B[j].aimDir.x + B[j].aimDir.y * B[j].aimDir.y);
+            }
+
+
         }
 
         
@@ -181,6 +196,12 @@ void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
 /*(B[j].bulletShape.getPosition().x >= enemyPosX && B[j].bulletShape.getPosition().x <= enemyPosX + sizeEnemyX &&
     B[j].bulletShape.getPosition().y >= enemyPosY && B[j].bulletShape.getPosition().y <= enemyPosY + sizeEnemyY) && B[j].state == true
 
-    */
+    
 
+void Player::HpPlayer(int k,int n) {
+    for (int i=0; i <= n; i++) {
+
+    }
+}
+*/
 

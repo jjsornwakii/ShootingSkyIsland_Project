@@ -4,8 +4,8 @@
 
 
 void Enemy::initEnimy(int i) {
-	EnenyCharactor.loadFromFile("res/pic/C2.png");
-	E[i].setEneny.setSize(sf::Vector2f(150.f, 150.f));
+	EnenyCharactor.loadFromFile("res/pic/AmoungUs2.png");
+	E[i].setEneny.setSize(sf::Vector2f(110.f, 150.f));
 	E[i].setEneny.setTexture(&EnenyCharactor);
 
 	EnenyTextureSize = EnenyCharactor.getSize();
@@ -22,14 +22,15 @@ void Enemy::setSpawn(float X, float Y,int i) {
 
 }
 
-void Enemy::EnemyMove(sf::Vector2f PlayerPos,int nEnemy) {
-	for (int i = 0; i < nEnemy; i++) {
-		if (E[i].EnemyState != false) {
+void Enemy::EnemyMove(sf::Vector2f PlayerPos,int nEnemy,int i) {
+	
+		if (E[i].EnemyState != false && E[i].EnemyMoveState != false) {
+			
 			if (E[i].setEneny.getPosition().y < PlayerPos.y) {
 				E[i].setEneny.move(0.0f, 0.05f * E[i].speed);
 				E[i].animationDir = 0;
 			}
-			else if (E[i].setEneny.getPosition().y > PlayerPos.y) {
+			if (E[i].setEneny.getPosition().y > PlayerPos.y) {
 				E[i].setEneny.move(0.0f, -0.05f * E[i].speed);
 				E[i].animationDir = 0;
 			}
@@ -40,14 +41,15 @@ void Enemy::EnemyMove(sf::Vector2f PlayerPos,int nEnemy) {
 				E[i].animationDir = 1;
 
 			}
-			else if (E[i].setEneny.getPosition().x > PlayerPos.x) {
+			if (E[i].setEneny.getPosition().x > PlayerPos.x) {
 				E[i].setEneny.move(-0.05f * E[i].speed, 0.f);
 
 				E[i].animationDir = 2;
 			}
+			
 
 		}
-	}
+	
 }
 
 void Enemy::EnemyAnimation(float deltaTime,int nEnemy) {
