@@ -6,7 +6,10 @@
 #include "time.h"
 #include "Background.h"
 #include "item.h"
+#include "UI.h"
+#include "string.h"
 
+#include <fstream>
 class game
 {
 

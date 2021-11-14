@@ -13,7 +13,6 @@ public:
 
 	struct Medic {
 		sf::RectangleShape medic;
-		
 		sf::Vector2u TextureSize1;
 		bool itemState;
 		
@@ -21,27 +20,52 @@ public:
 	sf::Texture medicTexture;
 	Medic med[5];
 
+
+
 	struct Crystal {
 		sf::RectangleShape crystal;
 		sf::Vector2u TextureSize2;
 		bool itemState;
 		
 	};
-
 	sf::Texture crystalTexture;
 	Crystal crys[2];
+
+
 
 	struct Bomb {
 		sf::RectangleShape bomb;
 		sf::Vector2u TextureSize;
+
 		bool itemState;
+		bool getItemState;
+		bool planState;
+		bool BombActivate;
+		
+		sf::Clock BOOMTime;
+		sf::RectangleShape BOOM;
+		sf::Vector2u BOOMTextureSize;
+		int currentXboom;
+		float BOOMgetTime=0;
+
+
 		sf::Clock bombCl;
 		float getTime = 0;
 		int currentX = 0;
+
+
+		
 	};
-	
+	int nBomb = 0;
 	sf::Texture bombTexture;
 	sf::Vector2u bombSize = bombTexture.getSize();
+
+	sf::Texture BOOMTexture;
+	sf::Vector2u BOOMSize = BOOMTexture.getSize();
+
+
+	float delayBomb = 5;
+	sf::Clock BombUseDelayTime;
 
 	Bomb bom[3];
 	
@@ -57,11 +81,8 @@ public:
 	
 	///////////////////////////// use the bomb
 
-	void planBomb(bool buttonPress,sf::Vector2f pos){
-		for (int i = 0; i < 3; i++) {
-
-		}
-	}
-
+	void planBomb( sf::Vector2f pos);
+	void BombAnimation();
+	void BOOMBAYAH(int , sf::Vector2f );
 };
 
