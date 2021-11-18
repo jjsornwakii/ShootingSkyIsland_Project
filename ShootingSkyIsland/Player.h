@@ -16,12 +16,12 @@ public:
 
 	// player status
 	int weaponSelect = 0;
-	float speed = 1;
+	float speed = 2;
 	float vectorSpeed;
 	float leng;
 	float moveX, moveY;
 	float hp = 3;
-	
+	float damage = 50;
 
 	int currentX=0,currentY=0;
 	bool switchAnimationState;
@@ -53,14 +53,14 @@ public:
 		float maxSpeed = 0.25;
 		bool state=false;
 	};
-	bullet B[20];
+	bullet B[200];
 
 public :
 	void initPlayer(float posX,float posY);
 	void HpPlayer();
 	void PlayerControl();
 	void PlayerAnimation(float deltaTime);
-	void UpdateBullet(sf::Vector2f MousePos,int numBullet);
+	void UpdateBullet(sf::Vector2f MousePos, int numBullet, float bulletSpeed, bool);
 
 	
 

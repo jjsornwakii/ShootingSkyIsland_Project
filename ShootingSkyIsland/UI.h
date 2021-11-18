@@ -5,6 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <iostream>
 
 class UI
 {
@@ -31,6 +32,17 @@ public:
 	int s[6];
 	int score;
 
+	// clock
+	sf::Text timer;
+	sf::Text stack1;
+	sf::Text stack2;
+	
+	sf::RectangleShape clockUI;
+	sf::Texture clockTexture;
+	sf::String T;
+
+	sf::Font F;
+
 	struct BACKUP {
 		int score=0;
 
@@ -43,7 +55,7 @@ public:
 		sf::Text S;
 	};
 
-	BACKUP backup[5000];
+	BACKUP backup[500];
 	//
 	int LineNumber=0;
 
@@ -51,14 +63,17 @@ public:
 	sf::Text number;
 	void HPinit();
 	void SCOREinit();
+	void CLOCKinit();
+
 	void SCOREchange(int);
 	void HPchange(float);
 
 	void initButton();
 
-	void sortScore();
+	void sortScore(std::string str);
 	void getbuScore();
 	void showTopScore(sf::RenderWindow*);
+	void updateTime(float, int, sf::RenderWindow*);
 	
 };
 

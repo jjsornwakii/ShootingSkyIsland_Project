@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
-
+#include <iostream>
 class item
 {
 
@@ -69,6 +69,18 @@ public:
 
 	Bomb bom[3];
 	
+	struct WeaponUpgrade
+	{
+		sf::RectangleShape WeaponU;
+		sf::Clock clock;
+		float T = 0;
+		bool activate;
+		bool itemState;
+	};
+
+	WeaponUpgrade weaponUp;
+	sf::Vector2u TextureWSize;
+	sf::Texture TextureWeaponUp;
 	int selectItem;
 	
 	

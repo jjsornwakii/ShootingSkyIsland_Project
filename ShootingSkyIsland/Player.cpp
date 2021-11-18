@@ -120,7 +120,7 @@ void Player::PlayerAnimation(float deltaTime) {
 
 
 
-void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
+void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet,float bulletSpeed,bool godMode) {
         
     if (getTimeDelay >= 100.0f) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
@@ -148,7 +148,7 @@ void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
 
         for (int j = 0; j < numBullet; j++) {
             if (B[j].state == true)
-                B[j].bulletShape.move(B[j].currVelocity.x * B[j].maxSpeed, B[j].currVelocity.y * B[j].maxSpeed);
+                B[j].bulletShape.move(B[j].currVelocity.x * (B[j].maxSpeed* bulletSpeed), B[j].currVelocity.y * (B[j].maxSpeed* bulletSpeed));
         }
 
 
@@ -156,8 +156,12 @@ void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet) {
         for (int j = 0; j < numBullet; j++) {
 
             B[j].bulletShape.setRadius(10.0f);
-            B[j].bulletShape.setFillColor(sf::Color::Red);
+            if(godMode == false)
+                B[j].bulletShape.setFillColor(sf::Color::Red);
             
+            else
+                B[j].bulletShape.setFillColor(sf::Color::Yellow);
+
             playerCenter = sf::Vector2f(player.getPosition().x + player.getSize().x / 2, player.getPosition().y + player.getSize().y / 2);
             MousePositonWindow = MousePos;
             if (weaponSelect==0) {

@@ -10,7 +10,12 @@ class Enemy
 public:
 	
 	sf::Texture EnenyCharactor;
+	sf::Texture EnenyCharactor2;
+	sf::Texture EnenyCharactor3;
+
 	sf::Vector2u EnenyTextureSize;
+	sf::Vector2u EnenyTextureSize2;
+	sf::Vector2u EnenyTextureSize3;
 	sf::Vector2f vec;
 
 	int i = 0;
@@ -29,11 +34,13 @@ public:
 		//staus
 		int animationDir = 0;
 		bool animationstate = 0;
-		float speed = 0.4f;
+		float speed = 1.0f;
 		float vectorSpeed;
 		float leng;
+		
+		int SelectE;
 
-		float hpEnemy = 500.0f;
+		float hpEnemy = 250.0f;
 		bool EnemyState =false;
 		bool EnemyMoveState = false;
 	};
@@ -41,8 +48,9 @@ public:
 	enemy E[5];
 
 	void initEnimy(int i);
+	void randomEnemy(int rand,int i, float);
 	void setSpawn(float x,float y,int i);
-	void EnemyMove(sf::Vector2f PlayerPos,int nEnemy,int i);
+	void EnemyMove(sf::Vector2f PlayerPos,int nEnemy,int i, int speedE);
 	void EnemyAnimation(float deltaTime,int nEnemy);
 
 };
