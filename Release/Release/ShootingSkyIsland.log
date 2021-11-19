@@ -1,0 +1,54 @@
+﻿  game.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(89,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(89,55): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(111,65): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(111,41): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(119,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(243,73): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(243,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(250,27): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(540,74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(546,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(549,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(552,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(574,91): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(574,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(655,103): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(657,100): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 344 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  ShootingSkyIsland.vcxproj -> C:\Users\siwak\source\repos\GameDev2\Release\ShootingSkyIsland.exe

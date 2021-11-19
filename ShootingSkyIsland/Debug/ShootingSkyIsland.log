@@ -1,1 +1,13 @@
-﻿  ShootingSkyIsland.vcxproj -> C:\Users\siwak\source\repos\GameDev2\Debug\ShootingSkyIsland.exe
+﻿Background.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+game.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+Background.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Magenta" (?Magenta@Color@sf@@2V12@B)
+game.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Red" (?Red@Color@sf@@2V12@B)
+Player.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Red" (?Red@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Red" (?Red@Color@sf@@2V12@B)
+game.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Yellow" (?Yellow@Color@sf@@2V12@B)
+Player.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Yellow" (?Yellow@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Yellow" (?Yellow@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Black" (?Black@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Green" (?Green@Color@sf@@2V12@B)
+C:\Users\siwak\source\repos\GameDev2\Debug\ShootingSkyIsland.exe : fatal error LNK1120: 6 unresolved externals

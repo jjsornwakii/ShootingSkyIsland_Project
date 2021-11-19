@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
-
+#include <iostream>
 
 class Background
 {
@@ -27,8 +27,15 @@ public:
 	sf::Text name;
 	sf::Font F;
 
+	sf::Texture cloudTexture[4];
+	sf::RectangleShape cloud[2];
+
+
 	void setBG();
+
+	void randomCloud(int);
 	void cloudMove();
+	void drawCloud(sf::RenderWindow*);
 	void animation(sf::RenderWindow* );
 };
 

@@ -1,35 +1,239 @@
-﻿  Animation.cpp
+﻿  Background.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\Background.cpp(53,48): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\Background.cpp(55,42): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\Background.cpp(73,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Enemy.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\Enemy.cpp(147,110): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+  game.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(88,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(88,55): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(110,65): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(110,41): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(118,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(236,73): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(236,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(243,27): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(533,74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(539,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(542,47): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(545,46): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(567,91): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(567,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(648,103): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(650,100): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+  item.cpp
   main.cpp
+  Player.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\Player.cpp(138,75): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\Player.cpp(159,63): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+  Render.cpp
+  save.cpp
+  UI.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(44,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(91,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(170,40): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(304,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(307,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(310,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating Code...
-main.obj : error LNK2019: unresolved external symbol "public: float __cdecl sf::Time::asSeconds(void)const " (?asSeconds@Time@sf@@QEBAMXZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Clock::Clock(void)" (??0Clock@sf@@QEAA@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::getElapsedTime(void)const " (?getElapsedTime@Clock@sf@@QEBA?AVTime@2@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::restart(void)" (?restart@Clock@sf@@QEAA?AVTime@2@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::String(char const *,class std::locale const &)" (??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: static bool __cdecl sf::Keyboard::isKeyPressed(enum sf::Keyboard::Key)" (?isKeyPressed@Keyboard@sf@@SA_NW4Key@12@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: static bool __cdecl sf::Mouse::isButtonPressed(enum sf::Mouse::Button)" (?isButtonPressed@Mouse@sf@@SA_NW4Button@12@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: static class sf::Vector2<int> __cdecl sf::Mouse::getPosition(void)" (?getPosition@Mouse@sf@@SA?AV?$Vector2@H@2@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: static class sf::Vector2<int> __cdecl sf::Mouse::getPosition(class sf::Window const &)" (?getPosition@Mouse@sf@@SA?AV?$Vector2@H@2@AEBVWindow@2@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (??0VideoMode@sf@@QEAA@III@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Window::close(void)" (?close@Window@sf@@QEAAXXZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Window::isOpen(void)const " (?isOpen@Window@sf@@QEBA_NXZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Window::pollEvent(class sf::Event &)" (?pollEvent@Window@sf@@QEAA_NAEAVEvent@2@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Window::display(void)" (?display@Window@sf@@QEAAXXZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(float,float)" (?setPosition@Transformable@sf@@QEAAXMM@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::Transformable::getPosition(void)const " (?getPosition@Transformable@sf@@QEBAAEBV?$Vector2@M@2@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Transformable::move(float,float)" (?move@Transformable@sf@@QEAAXMM@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Color::Color(unsigned char,unsigned char,unsigned char,unsigned char)" (??0Color@sf@@QEAA@EEEE@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::Shape::~Shape(void)" (??1Shape@sf@@UEAA@XZ) referenced in function "public: virtual __cdecl sf::RectangleShape::~RectangleShape(void)" (??1RectangleShape@sf@@UEAA@XZ)
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Shape::setTexture(class sf::Texture const *,bool)" (?setTexture@Shape@sf@@QEAAXPEBVTexture@2@_N@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Shape::setTextureRect(class sf::Rect<int> const &)" (?setTextureRect@Shape@sf@@QEAAXAEBV?$Rect@H@2@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Texture::Texture(void)" (??0Texture@sf@@QEAA@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Texture::~Texture(void)" (??1Texture@sf@@QEAA@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (?loadFromFile@Texture@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Rect@H@2@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::RectangleShape::RectangleShape(class sf::Vector2<float> const &)" (??0RectangleShape@sf@@QEAA@AEBV?$Vector2@M@1@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::RenderTarget::clear(class sf::Color const &)" (?clear@RenderTarget@sf@@QEAAXAEBVColor@2@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (?draw@RenderTarget@sf@@QEAAXAEBVDrawable@2@AEBVRenderStates@2@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::RenderWindow::RenderWindow(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (??0RenderWindow@sf@@QEAA@VVideoMode@1@AEBVString@1@IAEBUContextSettings@1@@Z) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::RenderWindow::~RenderWindow(void)" (??1RenderWindow@sf@@UEAA@XZ) referenced in function main
-main.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
-C:\Users\siwak\source\repos\GameDev2\x64\Debug\ShootingSkyIsland.exe : fatal error LNK1120: 31 unresolved externals
+Background.obj : error LNK2019: unresolved external symbol "public: int __cdecl sf::Time::asMilliseconds(void)const " (?asMilliseconds@Time@sf@@QEBAHXZ) referenced in function "public: void __cdecl Background::animation(class sf::RenderWindow *)" (?animation@Background@@QEAAXPEAVRenderWindow@sf@@@Z)
+game.obj : error LNK2001: unresolved external symbol "public: int __cdecl sf::Time::asMilliseconds(void)const " (?asMilliseconds@Time@sf@@QEBAHXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: int __cdecl sf::Time::asMilliseconds(void)const " (?asMilliseconds@Time@sf@@QEBAHXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::getElapsedTime(void)const " (?getElapsedTime@Clock@sf@@QEBA?AVTime@2@XZ)
+Background.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::getElapsedTime(void)const " (?getElapsedTime@Clock@sf@@QEBA?AVTime@2@XZ)
+Enemy.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::getElapsedTime(void)const " (?getElapsedTime@Clock@sf@@QEBA?AVTime@2@XZ)
+game.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::getElapsedTime(void)const " (?getElapsedTime@Clock@sf@@QEBA?AVTime@2@XZ)
+item.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::getElapsedTime(void)const " (?getElapsedTime@Clock@sf@@QEBA?AVTime@2@XZ)
+Player.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::restart(void)" (?restart@Clock@sf@@QEAA?AVTime@2@XZ)
+Background.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::restart(void)" (?restart@Clock@sf@@QEAA?AVTime@2@XZ)
+Enemy.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::restart(void)" (?restart@Clock@sf@@QEAA?AVTime@2@XZ)
+game.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::restart(void)" (?restart@Clock@sf@@QEAA?AVTime@2@XZ)
+item.obj : error LNK2001: unresolved external symbol "public: class sf::Time __cdecl sf::Clock::restart(void)" (?restart@Clock@sf@@QEAA?AVTime@2@XZ)
+Background.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::String(char const *,class std::locale const &)" (??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z) referenced in function "public: void __cdecl Background::setBG(void)" (?setBG@Background@@QEAAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::String::String(char const *,class std::locale const &)" (??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z)
+Render.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::String::String(char const *,class std::locale const &)" (??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::String::String(char const *,class std::locale const &)" (??0String@sf@@QEAA@PEBDAEBVlocale@std@@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(float,float)" (?setPosition@Transformable@sf@@QEAAXMM@Z)
+Background.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(float,float)" (?setPosition@Transformable@sf@@QEAAXMM@Z)
+Enemy.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(float,float)" (?setPosition@Transformable@sf@@QEAAXMM@Z)
+game.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(float,float)" (?setPosition@Transformable@sf@@QEAAXMM@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(float,float)" (?setPosition@Transformable@sf@@QEAAXMM@Z)
+Background.obj : error LNK2019: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::Transformable::getPosition(void)const " (?getPosition@Transformable@sf@@QEBAAEBV?$Vector2@M@2@XZ) referenced in function "public: void __cdecl Background::randomCloud(int)" (?randomCloud@Background@@QEAAXH@Z)
+Enemy.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::Transformable::getPosition(void)const " (?getPosition@Transformable@sf@@QEBAAEBV?$Vector2@M@2@XZ)
+game.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::Transformable::getPosition(void)const " (?getPosition@Transformable@sf@@QEBAAEBV?$Vector2@M@2@XZ)
+Player.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::Transformable::getPosition(void)const " (?getPosition@Transformable@sf@@QEBAAEBV?$Vector2@M@2@XZ)
+Background.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Transformable::move(float,float)" (?move@Transformable@sf@@QEAAXMM@Z) referenced in function "public: void __cdecl Background::animation(class sf::RenderWindow *)" (?animation@Background@@QEAAXPEAVRenderWindow@sf@@@Z)
+Enemy.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::move(float,float)" (?move@Transformable@sf@@QEAAXMM@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::move(float,float)" (?move@Transformable@sf@@QEAAXMM@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTexture(class sf::Texture const *,bool)" (?setTexture@Shape@sf@@QEAAXPEBVTexture@2@_N@Z)
+Background.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTexture(class sf::Texture const *,bool)" (?setTexture@Shape@sf@@QEAAXPEBVTexture@2@_N@Z)
+Enemy.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTexture(class sf::Texture const *,bool)" (?setTexture@Shape@sf@@QEAAXPEBVTexture@2@_N@Z)
+item.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTexture(class sf::Texture const *,bool)" (?setTexture@Shape@sf@@QEAAXPEBVTexture@2@_N@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTexture(class sf::Texture const *,bool)" (?setTexture@Shape@sf@@QEAAXPEBVTexture@2@_N@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (?loadFromFile@Texture@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Rect@H@2@@Z)
+Background.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (?loadFromFile@Texture@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Rect@H@2@@Z)
+Enemy.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (?loadFromFile@Texture@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Rect@H@2@@Z)
+item.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (?loadFromFile@Texture@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Rect@H@2@@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Texture::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class sf::Rect<int> const &)" (?loadFromFile@Texture@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV?$Rect@H@2@@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ)
+UI.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ)
+Background.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ)
+Enemy.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ)
+game.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ)
+item.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<unsigned int> __cdecl sf::Texture::getSize(void)const " (?getSize@Texture@sf@@QEBA?AV?$Vector2@I@2@XZ)
+Background.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Font::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadFromFile@Font@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: void __cdecl Background::setBG(void)" (?setBG@Background@@QEAAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Font::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadFromFile@Font@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: bool __cdecl sf::Font::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadFromFile@Font@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RectangleShape::setSize(class sf::Vector2<float> const &)" (?setSize@RectangleShape@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+Background.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RectangleShape::setSize(class sf::Vector2<float> const &)" (?setSize@RectangleShape@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+Enemy.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RectangleShape::setSize(class sf::Vector2<float> const &)" (?setSize@RectangleShape@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+item.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RectangleShape::setSize(class sf::Vector2<float> const &)" (?setSize@RectangleShape@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RectangleShape::setSize(class sf::Vector2<float> const &)" (?setSize@RectangleShape@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+Background.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (?draw@RenderTarget@sf@@QEAAXAEBVDrawable@2@AEBVRenderStates@2@@Z) referenced in function "public: void __cdecl Background::animation(class sf::RenderWindow *)" (?animation@Background@@QEAAXPEAVRenderWindow@sf@@@Z)
+game.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (?draw@RenderTarget@sf@@QEAAXAEBVDrawable@2@AEBVRenderStates@2@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::RenderTarget::draw(class sf::Drawable const &,class sf::RenderStates const &)" (?draw@RenderTarget@sf@@QEAAXAEBVDrawable@2@AEBVRenderStates@2@@Z)
+Background.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Text::setString(class sf::String const &)" (?setString@Text@sf@@QEAAXAEBVString@2@@Z) referenced in function "public: void __cdecl Background::setBG(void)" (?setBG@Background@@QEAAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setString(class sf::String const &)" (?setString@Text@sf@@QEAAXAEBVString@2@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setString(class sf::String const &)" (?setString@Text@sf@@QEAAXAEBVString@2@@Z)
+Background.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Text::setFont(class sf::Font const &)" (?setFont@Text@sf@@QEAAXAEBVFont@2@@Z) referenced in function "public: void __cdecl Background::setBG(void)" (?setBG@Background@@QEAAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setFont(class sf::Font const &)" (?setFont@Text@sf@@QEAAXAEBVFont@2@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setFont(class sf::Font const &)" (?setFont@Text@sf@@QEAAXAEBVFont@2@@Z)
+Background.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Text::setCharacterSize(unsigned int)" (?setCharacterSize@Text@sf@@QEAAXI@Z) referenced in function "public: void __cdecl Background::setBG(void)" (?setBG@Background@@QEAAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setCharacterSize(unsigned int)" (?setCharacterSize@Text@sf@@QEAAXI@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setCharacterSize(unsigned int)" (?setCharacterSize@Text@sf@@QEAAXI@Z)
+Background.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Text::setFillColor(class sf::Color const &)" (?setFillColor@Text@sf@@QEAAXAEBVColor@2@@Z) referenced in function "public: void __cdecl Background::setBG(void)" (?setBG@Background@@QEAAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setFillColor(class sf::Color const &)" (?setFillColor@Text@sf@@QEAAXAEBVColor@2@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setFillColor(class sf::Color const &)" (?setFillColor@Text@sf@@QEAAXAEBVColor@2@@Z)
+Background.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+game.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::RenderStates const sf::RenderStates::Default" (?Default@RenderStates@sf@@2V12@B)
+Background.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Magenta" (?Magenta@Color@sf@@2V12@B)
+Enemy.obj : error LNK2019: unresolved external symbol "public: float __cdecl sf::Time::asSeconds(void)const " (?asSeconds@Time@sf@@QEBAMXZ) referenced in function "public: void __cdecl Enemy::EnemyAnimation(float,int)" (?EnemyAnimation@Enemy@@QEAAXMH@Z)
+game.obj : error LNK2001: unresolved external symbol "public: float __cdecl sf::Time::asSeconds(void)const " (?asSeconds@Time@sf@@QEBAMXZ)
+item.obj : error LNK2001: unresolved external symbol "public: float __cdecl sf::Time::asSeconds(void)const " (?asSeconds@Time@sf@@QEBAMXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: float __cdecl sf::Time::asSeconds(void)const " (?asSeconds@Time@sf@@QEBAMXZ)
+Enemy.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Shape::setTextureRect(class sf::Rect<int> const &)" (?setTextureRect@Shape@sf@@QEAAXAEBV?$Rect@H@2@@Z) referenced in function "public: void __cdecl Enemy::EnemyAnimation(float,int)" (?EnemyAnimation@Enemy@@QEAAXMH@Z)
+item.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTextureRect(class sf::Rect<int> const &)" (?setTextureRect@Shape@sf@@QEAAXAEBV?$Rect@H@2@@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTextureRect(class sf::Rect<int> const &)" (?setTextureRect@Shape@sf@@QEAAXAEBV?$Rect@H@2@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setTextureRect(class sf::Rect<int> const &)" (?setTextureRect@Shape@sf@@QEAAXAEBV?$Rect@H@2@@Z)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Clock::Clock(void)" (??0Clock@sf@@QEAA@XZ) referenced in function "public: __cdecl Background::Background(void)" (??0Background@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::String(void)" (??0String@sf@@QEAA@XZ) referenced in function "public: __cdecl UI::UI(void)" (??0UI@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::String(unsigned int)" (??0String@sf@@QEAA@I@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::String(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)" (??0String@sf@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBVlocale@3@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+UI.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::String::String(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::locale const &)" (??0String@sf@@QEAA@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBVlocale@3@@Z)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::operator class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >(void)const " (??BString@sf@@QEBA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: class sf::String & __cdecl sf::String::operator=(class sf::String const &)" (??4String@sf@@QEAAAEAV01@AEBV01@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+UI.obj : error LNK2001: unresolved external symbol "public: class sf::String & __cdecl sf::String::operator=(class sf::String const &)" (??4String@sf@@QEAAAEAV01@AEBV01@@Z)
+game.obj : error LNK2019: unresolved external symbol "public: class sf::String & __cdecl sf::String::operator+=(class sf::String const &)" (??YString@sf@@QEAAAEAV01@AEBV01@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: unsigned __int64 __cdecl sf::String::getSize(void)const " (?getSize@String@sf@@QEBA_KXZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::String::erase(unsigned __int64,unsigned __int64)" (?erase@String@sf@@QEAAX_K0@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: static bool __cdecl sf::Keyboard::isKeyPressed(enum sf::Keyboard::Key)" (?isKeyPressed@Keyboard@sf@@SA_NW4Key@12@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: static bool __cdecl sf::Keyboard::isKeyPressed(enum sf::Keyboard::Key)" (?isKeyPressed@Keyboard@sf@@SA_NW4Key@12@@Z)
+game.obj : error LNK2019: unresolved external symbol "public: static bool __cdecl sf::Mouse::isButtonPressed(enum sf::Mouse::Button)" (?isButtonPressed@Mouse@sf@@SA_NW4Button@12@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: static bool __cdecl sf::Mouse::isButtonPressed(enum sf::Mouse::Button)" (?isButtonPressed@Mouse@sf@@SA_NW4Button@12@@Z)
+game.obj : error LNK2019: unresolved external symbol "public: static class sf::Vector2<int> __cdecl sf::Mouse::getPosition(void)" (?getPosition@Mouse@sf@@SA?AV?$Vector2@H@2@XZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: static class sf::Vector2<int> __cdecl sf::Mouse::getPosition(void)" (?getPosition@Mouse@sf@@SA?AV?$Vector2@H@2@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: static class sf::Vector2<int> __cdecl sf::Mouse::getPosition(class sf::Window const &)" (?getPosition@Mouse@sf@@SA?AV?$Vector2@H@2@AEBVWindow@2@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (??0VideoMode@sf@@QEAA@III@Z) referenced in function "void __cdecl `dynamic initializer for 'window''(void)" (??__Ewindow@@YAXXZ)
+Render.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::VideoMode::VideoMode(unsigned int,unsigned int,unsigned int)" (??0VideoMode@sf@@QEAA@III@Z)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Window::close(void)" (?close@Window@sf@@QEAAXXZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Window::isOpen(void)const " (?isOpen@Window@sf@@QEBA_NXZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Window::pollEvent(class sf::Event &)" (?pollEvent@Window@sf@@QEAA_NAEAVEvent@2@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Window::display(void)" (?display@Window@sf@@QEAAXXZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::Transformable::~Transformable(void)" (??1Transformable@sf@@UEAA@XZ) referenced in function "public: virtual __cdecl sf::Text::~Text(void)" (??1Text@sf@@UEAA@XZ)
+UI.obj : error LNK2001: unresolved external symbol "public: virtual __cdecl sf::Transformable::~Transformable(void)" (??1Transformable@sf@@UEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(class sf::Vector2<float> const &)" (?setPosition@Transformable@sf@@QEAAXAEBV?$Vector2@M@2@@Z) referenced in function "void __cdecl reset(void)" (?reset@@YAXXZ)
+item.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(class sf::Vector2<float> const &)" (?setPosition@Transformable@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Transformable::setPosition(class sf::Vector2<float> const &)" (?setPosition@Transformable@sf@@QEAAXAEBV?$Vector2@M@2@@Z)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Color::Color(unsigned char,unsigned char,unsigned char,unsigned char)" (??0Color@sf@@QEAA@EEEE@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+UI.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::Color::Color(unsigned char,unsigned char,unsigned char,unsigned char)" (??0Color@sf@@QEAA@EEEE@Z)
+game.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::Shape::~Shape(void)" (??1Shape@sf@@UEAA@XZ) referenced in function "public: virtual __cdecl sf::CircleShape::~CircleShape(void)" (??1CircleShape@sf@@UEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: class sf::Rect<float> __cdecl sf::Shape::getGlobalBounds(void)const " (?getGlobalBounds@Shape@sf@@QEBA?AV?$Rect@M@2@XZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::CircleShape::CircleShape(float,unsigned __int64)" (??0CircleShape@sf@@QEAA@M_K@Z) referenced in function "public: __cdecl Player::Heart::Heart(void)" (??0Heart@Player@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Texture::Texture(void)" (??0Texture@sf@@QEAA@XZ) referenced in function "public: __cdecl Background::Background(void)" (??0Background@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Texture::~Texture(void)" (??1Texture@sf@@QEAA@XZ) referenced in function "public: __cdecl Background::Background(void)" (??0Background@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Font::Font(void)" (??0Font@sf@@QEAA@XZ) referenced in function "public: __cdecl Background::Background(void)" (??0Background@@QEAA@XZ)
+UI.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::Font::Font(void)" (??0Font@sf@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Font::~Font(void)" (??1Font@sf@@QEAA@XZ) referenced in function "int `public: __cdecl Background::Background(void)'::`1'::dtor$11" (?dtor$11@?0???0Background@@QEAA@XZ@4HA)
+UI.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::Font::~Font(void)" (??1Font@sf@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::RectangleShape::RectangleShape(class sf::Vector2<float> const &)" (??0RectangleShape@sf@@QEAA@AEBV?$Vector2@M@1@@Z) referenced in function "public: __cdecl Background::Background(void)" (??0Background@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::RenderTarget::clear(class sf::Color const &)" (?clear@RenderTarget@sf@@QEAAXAEBVColor@2@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::RenderWindow::RenderWindow(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (??0RenderWindow@sf@@QEAA@VVideoMode@1@AEBVString@1@IAEBUContextSettings@1@@Z) referenced in function "void __cdecl `dynamic initializer for 'window''(void)" (??__Ewindow@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::RenderWindow::~RenderWindow(void)" (??1RenderWindow@sf@@UEAA@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'window''(void)" (??__Fwindow@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: virtual class sf::Vector2<unsigned int> __cdecl sf::RenderWindow::getSize(void)const " (?getSize@RenderWindow@sf@@UEBA?AV?$Vector2@I@2@XZ) referenced in function "void __cdecl reset(void)" (?reset@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Text::Text(void)" (??0Text@sf@@QEAA@XZ) referenced in function "public: __cdecl UI::BACKUP::BACKUP(void)" (??0BACKUP@UI@@QEAA@XZ)
+UI.obj : error LNK2001: unresolved external symbol "public: __cdecl sf::Text::Text(void)" (??0Text@sf@@QEAA@XZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Text::setStyle(unsigned int)" (?setStyle@Text@sf@@QEAAXI@Z) referenced in function "void __cdecl reset(void)" (?reset@@YAXXZ)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Text::setStyle(unsigned int)" (?setStyle@Text@sf@@QEAAXI@Z)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::SoundSource::setVolume(float)" (?setVolume@SoundSource@sf@@QEAAXM@Z) referenced in function "void __cdecl reset(void)" (?reset@@YAXXZ)
+Player.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::SoundSource::setVolume(float)" (?setVolume@SoundSource@sf@@QEAAXM@Z)
+game.obj : error LNK2019: unresolved external symbol "public: virtual void __cdecl sf::SoundStream::play(void)" (?play@SoundStream@sf@@UEAAXXZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::SoundStream::setLoop(bool)" (?setLoop@SoundStream@sf@@QEAAX_N@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Music::Music(void)" (??0Music@sf@@QEAA@XZ) referenced in function "void __cdecl `dynamic initializer for 'music''(void)" (??__Emusic@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::Music::~Music(void)" (??1Music@sf@@UEAA@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'music''(void)" (??__Fmusic@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::Music::openFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?openFromFile@Music@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::Sound::Sound(void)" (??0Sound@sf@@QEAA@XZ) referenced in function "void __cdecl `dynamic initializer for 'Boom''(void)" (??__EBoom@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl sf::Sound::~Sound(void)" (??1Sound@sf@@UEAA@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'Boom''(void)" (??__FBoom@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: virtual void __cdecl sf::Sound::play(void)" (?play@Sound@sf@@UEAAXXZ) referenced in function "public: void __cdecl game::run(void)" (?run@game@@QEAAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Sound::setBuffer(class sf::SoundBuffer const &)" (?setBuffer@Sound@sf@@QEAAXAEBVSoundBuffer@2@@Z) referenced in function "void __cdecl reset(void)" (?reset@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::SoundBuffer::SoundBuffer(void)" (??0SoundBuffer@sf@@QEAA@XZ) referenced in function "void __cdecl `dynamic initializer for 'BoomBuffer''(void)" (??__EBoomBuffer@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::SoundBuffer::~SoundBuffer(void)" (??1SoundBuffer@sf@@QEAA@XZ) referenced in function "void __cdecl `dynamic atexit destructor for 'BoomBuffer''(void)" (??__FBoomBuffer@@YAXXZ)
+game.obj : error LNK2019: unresolved external symbol "public: bool __cdecl sf::SoundBuffer::loadFromFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadFromFile@SoundBuffer@sf@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) referenced in function "void __cdecl reset(void)" (?reset@@YAXXZ)
+game.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Red" (?Red@Color@sf@@2V12@B)
+Player.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Red" (?Red@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Red" (?Red@Color@sf@@2V12@B)
+game.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Yellow" (?Yellow@Color@sf@@2V12@B)
+Player.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Yellow" (?Yellow@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Yellow" (?Yellow@Color@sf@@2V12@B)
+item.obj : error LNK2019: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::RectangleShape::getSize(void)const " (?getSize@RectangleShape@sf@@QEBAAEBV?$Vector2@M@2@XZ) referenced in function "public: void __cdecl item::BOOMBAYAH(int,class sf::Vector2<float>)" (?BOOMBAYAH@item@@QEAAXHV?$Vector2@M@sf@@@Z)
+Player.obj : error LNK2001: unresolved external symbol "public: class sf::Vector2<float> const & __cdecl sf::RectangleShape::getSize(void)const " (?getSize@RectangleShape@sf@@QEBAAEBV?$Vector2@M@2@XZ)
+Player.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Shape::setFillColor(class sf::Color const &)" (?setFillColor@Shape@sf@@QEAAXAEBVColor@2@@Z) referenced in function "public: void __cdecl Player::UpdateBullet(class sf::Vector2<float>,int,float,bool,class sf::Sound *)" (?UpdateBullet@Player@@QEAAXV?$Vector2@M@sf@@HM_NPEAVSound@3@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: void __cdecl sf::Shape::setFillColor(class sf::Color const &)" (?setFillColor@Shape@sf@@QEAAXAEBVColor@2@@Z)
+Player.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::CircleShape::setRadius(float)" (?setRadius@CircleShape@sf@@QEAAXM@Z) referenced in function "public: void __cdecl Player::UpdateBullet(class sf::Vector2<float>,int,float,bool,class sf::Sound *)" (?UpdateBullet@Player@@QEAAXV?$Vector2@M@sf@@HM_NPEAVSound@3@@Z)
+Player.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Sound::setLoop(bool)" (?setLoop@Sound@sf@@QEAAX_N@Z) referenced in function "public: void __cdecl Player::PlayerAnimation(float,class sf::Sound *)" (?PlayerAnimation@Player@@QEAAXMPEAVSound@sf@@@Z)
+Render.obj : error LNK2019: unresolved external symbol "public: void __cdecl sf::Window::create(class sf::VideoMode,class sf::String const &,unsigned int,struct sf::ContextSettings const &)" (?create@Window@sf@@QEAAXVVideoMode@2@AEBVString@2@IAEBUContextSettings@2@@Z) referenced in function "public: void __cdecl Render::renderWin(void)" (?renderWin@Render@@QEAAXXZ)
+UI.obj : error LNK2019: unresolved external symbol "public: __cdecl sf::String::String(char,class std::locale const &)" (??0String@sf@@QEAA@DAEBVlocale@std@@@Z) referenced in function "public: void __cdecl UI::showTopScore(class sf::RenderWindow *)" (?showTopScore@UI@@QEAAXPEAVRenderWindow@sf@@@Z)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Black" (?Black@Color@sf@@2V12@B)
+UI.obj : error LNK2001: unresolved external symbol "public: static class sf::Color const sf::Color::Green" (?Green@Color@sf@@2V12@B)
+C:\Users\siwak\source\repos\GameDev2\SFML-2.5.1\lib\sfml-network-s.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\siwak\source\repos\GameDev2\SFML-2.5.1\lib\sfml-audio-d.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\siwak\source\repos\GameDev2\SFML-2.5.1\lib\sfml-graphics-d.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\siwak\source\repos\GameDev2\SFML-2.5.1\lib\sfml-window-d.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\siwak\source\repos\GameDev2\SFML-2.5.1\lib\sfml-system-d.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\siwak\source\repos\GameDev2\x64\Debug\ShootingSkyIsland.exe : fatal error LNK1120: 79 unresolved externals

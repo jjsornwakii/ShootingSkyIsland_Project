@@ -48,7 +48,7 @@ public:
 	enemy E[5];
 
 	void initEnimy(int i);
-	void randomEnemy(int rand,int i, float);
+	void randomEnemy(int rand,int i, float, int);
 	void setSpawn(float x,float y,int i);
 	void EnemyMove(sf::Vector2f PlayerPos,int nEnemy,int i, int speedE);
 	void EnemyAnimation(float deltaTime,int nEnemy);

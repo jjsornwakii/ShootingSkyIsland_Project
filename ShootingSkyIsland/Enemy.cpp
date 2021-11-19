@@ -29,8 +29,16 @@ void Enemy::initEnimy(int i) {
 	E[i].setEneny.setTextureRect(sf::IntRect(EnenyTextureSize.x * 1, EnenyTextureSize.y * 0, EnenyTextureSize.x, EnenyTextureSize.y));
 }
 
-void Enemy::randomEnemy(int rand, int i, float xhp)
+void Enemy::randomEnemy(int rand, int i, float xhp,int level)
 {
+	if (level <= 2) {
+		rand = 0;
+	}
+
+	else if (level <= 3&& rand > 1 ) {
+		rand = 1;
+	}
+
 	if (rand == 0) {
 		E[i].setEneny.setTexture(&EnenyCharactor);
 		E[i].setEneny.setSize(sf::Vector2f(110.f, 150.f));

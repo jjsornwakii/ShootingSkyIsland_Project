@@ -5,7 +5,7 @@ void Background::setBG() {
 	bg.setSize(sf::Vector2f(1920,1080));
 	bg.setTexture(&backgroundText);
 	
-	Skybackground.loadFromFile("res/pic/sky.png");
+	Skybackground.loadFromFile("res/pic/sky2.png");
 	skybg.setSize(sf::Vector2f(1920, 1080));
 	skybg.setTexture(&Skybackground);
 
@@ -36,6 +36,16 @@ void Background::setBG() {
 	name.setPosition(1600, 10);
 	name.setFont(F);
 
+	cloudTexture[0].loadFromFile("res/pic/Cloud1.png");
+	cloudTexture[1].loadFromFile("res/pic/Cloud2.png");
+	cloudTexture[2].loadFromFile("res/pic/Cloud3.png");
+	cloudTexture[3].loadFromFile("res/pic/Cloud4.png");
+
+	cloud[0].setPosition(2000,0);
+	cloud[1].setPosition(2000,0);
+
+	cloud[0].setSize(sf::Vector2f(500,250));
+	cloud[1].setSize(sf::Vector2f(600, 200));
 }
 
 void Background::animation(sf::RenderWindow* window) {
@@ -54,4 +64,24 @@ void Background::animation(sf::RenderWindow* window) {
 			model.move(0, .1f);
 	}
 	window->draw(model);
+}
+
+void Background::randomCloud(int rand) {
+	for (int i = 0; i < 2; i++) {
+		if (cloud[i].getPosition().x>=1920) {
+			std::cout << "out";
+			cloud[i].setPosition(-700,rand % 500);
+			cloud[i].setTexture(&cloudTexture[rand % 4]);
+		}	
+	}
+}
+
+void Background::cloudMove() {
+	cloud[0].move( 0.1f , 0);
+	cloud[1].move(0.25f, 0);
+}
+
+void Background::drawCloud(sf::RenderWindow* window) {
+	window->draw(cloud[0]);
+	window->draw(cloud[1]);
 }

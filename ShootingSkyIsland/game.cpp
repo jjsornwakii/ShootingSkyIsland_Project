@@ -22,6 +22,7 @@
     int numBullet = 200;
     int numEnemy = 5;
     int countKill = 0;
+    int level = 0;
     float t = 0;
     sf::Clock T;
 
@@ -48,6 +49,7 @@
     sf::Sound Boom;
     sf::Sound getItem;
 
+    sf::Image icon;
 
     void reset() {
   
@@ -96,6 +98,7 @@
         numBullet = 200;
         numEnemy = 5;
         countKill = 0;
+        level = 0;
         t = T.restart().asSeconds();
 
         // var test
@@ -142,6 +145,12 @@ void game::run()
 {
     reset();
     
+    if (!icon.loadFromFile("res/icon/icon.png")) {
+        std::cout << "TT";
+    }
+
+    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+
     music.openFromFile("res/audio/Cold_wind_sound_effect.ogg");
     music.setVolume(100);
     music.setLoop(true);
@@ -389,7 +398,7 @@ void game::run()
                     for (int i = 0; i < numEnemy; i++) {
                         if (En.E[i].EnemyState == false /* && countEnemy < 20*/) {
 
-                            En.randomEnemy(rand() % 3, i, hpE);
+                            En.randomEnemy(rand() % 3, i, hpE,level);
 
 
                             if (rand() % 2 == 0) {
@@ -557,6 +566,7 @@ void game::run()
                             hpE += 0.05f;
                             speedE += 0.1f;
                             P.damage += 10;
+                            level++;
                             t = T.restart().asSeconds();
 
                             //sf::Vector2f pp = { 100 + rand() % 1500,100 + rand() % 700 };
@@ -666,6 +676,10 @@ void game::run()
 
                 Item.BombAnimation();
             
+                BG.randomCloud(rand());
+                BG.cloudMove();
+                BG.drawCloud(&window);
+
             window.draw(ui.clockUI);
             
             ui.updateTime(t, countKill, &window);
