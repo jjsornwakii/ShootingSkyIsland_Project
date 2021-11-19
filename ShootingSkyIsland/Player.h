@@ -4,6 +4,7 @@
 #include <cmath>
 #include <conio.h>
 #include "Enemy.h"
+#include <SFML\Audio.hpp>
 
 class Player:public Enemy
 {
@@ -59,8 +60,8 @@ public :
 	void initPlayer(float posX,float posY);
 	void HpPlayer();
 	void PlayerControl();
-	void PlayerAnimation(float deltaTime);
-	void UpdateBullet(sf::Vector2f MousePos, int numBullet, float bulletSpeed, bool);
+	void PlayerAnimation(float deltaTime, sf::Sound*);
+	void UpdateBullet(sf::Vector2f MousePos, int numBullet, float bulletSpeed, bool,sf::Sound*);
 
 	
 

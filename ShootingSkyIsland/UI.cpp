@@ -2,7 +2,7 @@
 
 void UI::HPinit() {
 	HPplayer = 100;
-	HP.setFillColor(sf::Color::Green);
+	HP.setFillColor(sf::Color{ 50,200,100,255 });
 	HP.setSize(sf::Vector2f(500, 30));
 	HP.setPosition(10, 10);
 }
@@ -28,6 +28,12 @@ void UI::initButton() {
 	ExitButton.setSize(sf::Vector2f(400, 195));
 	ExitButton.setTextureRect(sf::IntRect(0, buttonSize.y*2/3, buttonSize.x, buttonSize.y/3));
 	ExitButton.setPosition(200,  800);
+
+	quitButton.setTexture(&mainButton);
+	quitButton.setSize(sf::Vector2f(200, 95));
+	quitButton.setTextureRect(sf::IntRect(0, buttonSize.y * 2 / 3, buttonSize.x, buttonSize.y / 3));
+	quitButton.setPosition(800, 450);
+
 }
 
 void UI::SCOREinit() {
@@ -103,7 +109,10 @@ void UI::SCOREchange(int sc) {
 		add = 25;
 
 	else if (sc == 1)
-		add = 100;
+		add = 125;
+
+	else if (sc == 2)
+		add = 75;
 
 	score += add;
 	
@@ -123,6 +132,19 @@ void UI::HPchange(float change) {
 	if (HPplayer > 100)
 		HPplayer = 100;
 
+	if (HPplayer > 75) {
+		HP.setFillColor(sf::Color{ 50,200,100,255 });
+	}
+	else if (HPplayer > 50) {
+		HP.setFillColor(sf::Color::Green);
+	}
+	else if (HPplayer > 25) {
+		HP.setFillColor(sf::Color{ 250,100,10,255 });
+	}
+	else if (HPplayer >= 0) {
+		HP.setFillColor(sf::Color::Red);
+	}
+
 	HP.setSize(sf::Vector2f(HPplayer*500/100, 30));
 }
 
@@ -134,10 +156,10 @@ void UI::getbuScore() {
 	int i=0;
 	int j = 0;
 	int s = 0;
-	std::cout << "----READ----" << std::endl;
+	//std::cout << "----READ----" << std::endl;
 	while (f >> str) {
 		
-		std::cout << str << std::endl;
+		//std::cout << str << std::endl;
 		if (i % 2 == 0) {
 			backup[j].buName = str;
 		}
@@ -181,14 +203,8 @@ void UI::getbuScore() {
 
 
 void UI::sortScore(std::string str) {
-	std::cout << "------Before Sort-------" << std::endl;
-	for (int j = 0; j <= 10; j++) {
-		if (backup[j].buName != "\0") {
+	//std::cout << "------Before Sort-------" << std::endl;
 
-			std::cout << backup[j].buName << " ";
-			std::cout << backup[j].score << std::endl;
-		}
-	}
 
 	backup[LineNumber].score = score;
 	backup[LineNumber].buName = str;
@@ -222,8 +238,8 @@ void UI::sortScore(std::string str) {
 
 
 
-	std::cout << "----------------" << std::endl;
-	std::cout << "sort" << std::endl;
+	//std::cout << "----------------" << std::endl;
+	//std::cout << "sort" << std::endl;
 	std::ofstream myScore;
 	myScore.open("score.txt");
 	if (myScore.is_open()) {
@@ -233,8 +249,8 @@ void UI::sortScore(std::string str) {
 				myScore << backup[j].buName << std::endl;
 				myScore << backup[j].score << "\r";
 
-				std::cout << backup[j].buName << " ";
-				std::cout << backup[j].score << std::endl;
+				//std::cout << backup[j].buName << " ";
+				//std::cout << backup[j].score << std::endl;
 			}
 			
 		}

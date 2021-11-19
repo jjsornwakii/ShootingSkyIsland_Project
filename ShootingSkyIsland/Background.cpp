@@ -1,7 +1,7 @@
 #include "Background.h"
 
 void Background::setBG() {
-	backgroundText.loadFromFile("res/pic/bg.png");
+	backgroundText.loadFromFile("res/pic/bg2.png");
 	bg.setSize(sf::Vector2f(1920,1080));
 	bg.setTexture(&backgroundText);
 	
@@ -30,9 +30,9 @@ void Background::setBG() {
 	Logo.setPosition(15, 20);
 
 	F.loadFromFile("res/font/MyFont.ttf");
-	name.setFillColor(sf::Color::Black);
+	name.setFillColor(sf::Color::Magenta);
 	name.setCharacterSize(40);
-	name.setString("Siwakorn Suriya\n64010850");
+	name.setString("Siwakorn Suriya\n     64010850");
 	name.setPosition(1600, 10);
 	name.setFont(F);
 

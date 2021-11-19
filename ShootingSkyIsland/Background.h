@@ -28,6 +28,7 @@ public:
 	sf::Font F;
 
 	void setBG();
+	void cloudMove();
 	void animation(sf::RenderWindow* );
 };
 

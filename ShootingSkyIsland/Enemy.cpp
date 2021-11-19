@@ -140,6 +140,9 @@ void Enemy::EnemyAnimation(float deltaTime,int nEnemy) {
 				
 				else if(E[i].SelectE == 1)
 					E[i].setEneny.setTextureRect(sf::IntRect(EnenyTextureSize2.x * E[i].current.x, EnenyTextureSize2.y * E[i].current.y, EnenyTextureSize2.x, EnenyTextureSize2.y));
+
+				else if(E[i].SelectE == 2)
+					E[i].setEneny.setTextureRect(sf::IntRect(EnenyTextureSize3.x * E[i].current.x, EnenyTextureSize3.y * E[i].current.y, EnenyTextureSize3.x, EnenyTextureSize3.y));
 			}
 		}
 		bounchTime = EnemyClock.restart().asSeconds();

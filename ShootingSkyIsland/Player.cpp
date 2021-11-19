@@ -84,11 +84,14 @@ void Player::PlayerControl()
        
 }
 
-void Player::PlayerAnimation(float deltaTime) {
+void Player::PlayerAnimation(float deltaTime,sf::Sound* w) {
 
     if (switchAnimationState == 1) {
+        w->setLoop(true);
+        w->setVolume(100);
         getTime = playerClock.getElapsedTime().asSeconds();
         if (deltaTime < getTime) {
+            w->play();
             getTime = playerClock.restart().asSeconds();
 
             if (currentX >= 2) {
@@ -111,6 +114,8 @@ void Player::PlayerAnimation(float deltaTime) {
     player.setTextureRect(sf::IntRect(TextureSize.x * currentX, TextureSize.y * currentY, TextureSize.x, TextureSize.y));
     
     if (switchAnimationState == false) {
+        w->setVolume(0);
+        w->setLoop(false);
         player.setTextureRect(sf::IntRect(TextureSize.x * 1, TextureSize.y * 0, TextureSize.x, TextureSize.y));
         getTime = playerClock.restart().asSeconds();
     }
@@ -120,19 +125,26 @@ void Player::PlayerAnimation(float deltaTime) {
 
 
 
-void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet,float bulletSpeed,bool godMode) {
+void Player::UpdateBullet(sf::Vector2f MousePos, int numBullet,float bulletSpeed,bool godMode, sf::Sound* m) {
         
     if (getTimeDelay >= 100.0f) {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
             for (int j = 0; j < numBullet; j++) {
                 //std::cout << "Y" << std::endl;  
                     if (B[j].state == false) {
+                        
+                        
+                        m->play();
                         getTimeDelay = delayShoot.restart().asMilliseconds();
                         B[j].currVelocity = B[j].aimDirNorm;
                         B[j].bulletShape.setPosition(playerCenter);
                         B[j].state = true;
                         break;
                     }
+                    else {
+                        
+                    }
+                    
             }
 
             if (sf::Mouse::getPosition().x > player.getPosition().x)

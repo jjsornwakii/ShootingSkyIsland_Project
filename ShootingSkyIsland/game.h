@@ -8,7 +8,7 @@
 #include "item.h"
 #include "UI.h"
 #include "string.h"
-
+#include "SFML\Audio.hpp"
 #include <fstream>
 class game
 {

@@ -4,8 +4,8 @@
    sf::RenderWindow window(sf::VideoMode(1920, 1080), "Shooting Sky Island!", sf::Style::Close | sf::Style::Resize);
 
     sf::CircleShape MousePointer(5);
-
-
+    
+    
     Background BG;
     Player P;
     Enemy En;
@@ -36,6 +36,18 @@
     sf::Text text1;
     sf::Text showS;
     std::string temp="\0";
+
+    sf::Music music;
+    sf::SoundBuffer shotBuffer;
+    sf::SoundBuffer walkBuffer;
+    sf::SoundBuffer BoomBuffer;
+    sf::SoundBuffer getItemBuffer;
+
+    sf::Sound shot;
+    sf::Sound walk;
+    sf::Sound Boom;
+    sf::Sound getItem;
+
 
     void reset() {
   
@@ -98,6 +110,7 @@
         ui.HPinit();
         ui.SCOREinit();
         ui.CLOCKinit();
+        ui.initButton();
 
         // Random
         srand(time(NULL));
@@ -105,14 +118,40 @@
         for (int i = 0; i < numEnemy; i++) {
             En.initEnimy(i);
         }
+
+        walkBuffer.loadFromFile("res/audio/walk.ogg");
+        walk.setBuffer(walkBuffer);
+        walk.setVolume(100);
+
+        shotBuffer.loadFromFile("res/audio/s.ogg");
+        shot.setBuffer(shotBuffer);
+        shot.setVolume(5);
+
+        BoomBuffer.loadFromFile("res/audio/bomb.ogg");
+        Boom.setBuffer(BoomBuffer);
+        Boom.setVolume(100);
+
+        getItemBuffer.loadFromFile("res/audio/getitem.ogg");
+        getItem.setBuffer(getItemBuffer);
+        getItem.setVolume(10);
     }
 
+    
 
 void game::run()
 {
+    reset();
+    
+    music.openFromFile("res/audio/Cold_wind_sound_effect.ogg");
+    music.setVolume(100);
+    music.setLoop(true);
+    music.play();
+
+
+
     ui.getbuScore();
     ui.sortScore(temp);
-    window.setFramerateLimit(800);
+    //window.setFramerateLimit(800);
 
     while (window.isOpen()) {
         
@@ -123,59 +162,50 @@ void game::run()
         while (window.pollEvent(EVNT)) {
             switch (EVNT.type) {
             case sf::Event::Closed: window.close(); break;
-                /*case sf::Event::Resized: std::cout << EVNT.size.width << "     " << EVNT.size.height << std::endl;
-                
-                view.setSize({
-                     static_cast<float>(EVNT.size.width),
-                     static_cast<float>(EVNT.size.height)
-                });
-                window.setView(view);
-                
-                break;*/
-            case sf::Event::EventType::KeyPressed:
-                if (SelectMenu == 3) {
-                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
+            case sf::Event::MouseButtonPressed:
 
-                    SelectMenu = 0;
+                if (SelectMenu == 1) {
+                    if (pauseMenu == true) {
+
+                        if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                            if (ui.quitButton.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
+                                SelectMenu = 0;
+                                std::cout << "EXIT";
+                            }
+                        }
 
                     }
                 }
-                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 
-                    pauseMenu = !pauseMenu;
+                else if (EVNT.key.code == sf::Mouse::Left && SelectMenu == 0) {
+                    std::cout << "click" << std::endl;
 
-                }
-                break;
+                    //MousePointer.setPosition(sf::Vector2f(sf::Mouse::getPosition()));
+                    if (ui.PlayButton.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
+                        std::cout << "1" << std::endl;
+                            reset();
+                            SelectMenu = 1;
+ 
+                    }
 
-            }
-
-            if (SelectMenu == 0) {
-                window.clear();
-
-                
-
-                MousePointer.setPosition(sf::Vector2f(sf::Mouse::getPosition()));
-                if (ui.PlayButton.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
-
-                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+                    if (ui.ScoreButton.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
                         
-                        reset();
-                        SelectMenu = 1;
+                        std::cout << "2" << std::endl;
+                         
+                            SelectMenu = 3;
+                            ui.getbuScore();
                         
+
                     }
 
-                }
 
-                if (ui.ScoreButton.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
 
-                    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-                        SelectMenu = 3;
-                        ui.getbuScore();
-                        //ui.sortScore();
-                        MousePointer.setPosition(-1, -1);
+                    if (ui.ExitButton.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
+                        std::cout << "3" << std::endl;
+                        window.close();
+                      
                     }
-
-                }
+                
 
                 /////////////// Reset MainMenu
 
@@ -195,8 +225,8 @@ void game::run()
                 }
 
                 // Background
-                
-                
+
+
                 BG.setBG();
 
                 // player
@@ -213,19 +243,28 @@ void game::run()
                 for (int i = 0; i < numEnemy; i++) {
                     En.initEnimy(i);
                 }
+                }
+                break;
+                
 
+            case sf::Event::EventType::KeyPressed:
+                if (SelectMenu == 3) {
+                    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 
-                window.draw(BG.skybg);
-                window.draw(BG.mainModelbg);
-                window.draw(BG.Logo);
-                window.draw(BG.name);
+                    SelectMenu = 0;
 
-                window.draw(ui.PlayButton);
-                window.draw(ui.ScoreButton);
-                window.draw(ui.ExitButton);
+                    }
+                }
+                else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 
-                window.display();
+                    pauseMenu = !pauseMenu;
+
+                }
+                break;
+
             }
+
+            
 
             if (SelectMenu == 2) {
                 if (EVNT.type == sf::Event::TextEntered) {
@@ -263,10 +302,28 @@ void game::run()
                 }
             }
             
+            
 
             
         }
+        if (SelectMenu == 0) {
+            window.clear();
+            MousePointer.setPosition(sf::Vector2f(sf::Mouse::getPosition()));
+            
+          
 
+
+            window.draw(BG.skybg);
+            window.draw(BG.mainModelbg);
+            window.draw(BG.Logo);
+            window.draw(BG.name);
+
+            window.draw(ui.PlayButton);
+            window.draw(ui.ScoreButton);
+            window.draw(ui.ExitButton);
+
+            window.display();
+        }
         if (SelectMenu == 2) {
 
             window.clear();
@@ -308,7 +365,8 @@ void game::run()
                 
                 // UPDATE BULLET
 
-                P.UpdateBullet(sf::Vector2f(sf::Mouse::getPosition(window)), numBullet,bulletSpeed, Item.weaponUp.activate);
+                P.UpdateBullet(sf::Vector2f(sf::Mouse::getPosition(window)), numBullet,bulletSpeed, Item.weaponUp.activate, &shot);
+
 
                 t = T.getElapsedTime().asSeconds();
                 
@@ -353,6 +411,7 @@ void game::run()
                         if (P.player.getGlobalBounds().intersects(Item.med[i].medic.getGlobalBounds())&& Item.med[i].itemState == true) {
                             Item.med[i].itemState = false;
                             ui.HPchange(10.0);
+                            getItem.play();
                         }
                     }
 
@@ -364,6 +423,7 @@ void game::run()
 
                             Item.CryTime = Item.CrystalDelay.restart().asSeconds();
                             Item.CryTime = 0.f;
+                            getItem.play();
                         }
                     }
 
@@ -373,6 +433,7 @@ void game::run()
                             Item.bom[i].itemState = false;
                             Item.bom[i].getItemState = true;
                             Item.nBomb++;
+                            getItem.play();
                         }
                         
                     }
@@ -380,6 +441,7 @@ void game::run()
                     if (P.player.getGlobalBounds().intersects(Item.weaponUp.WeaponU.getGlobalBounds()) && Item.weaponUp.itemState == true) {
                         Item.weaponUp.activate = true;
                         Item.weaponUp.itemState = false;
+                        getItem.play();
                     }
 
 
@@ -438,7 +500,7 @@ void game::run()
                 // UPDATE PLAYER
 
                 P.PlayerControl();
-                P.PlayerAnimation(0.25);
+                P.PlayerAnimation(0.25,&walk);
 
 
 
@@ -450,7 +512,7 @@ void game::run()
                         // bomb collision
                         if (En.E[i].setEneny.getGlobalBounds().intersects(Item.bom[j].bomb.getGlobalBounds()) == true && Item.bom[j].planState == true && Item.bom[j].itemState == true ) {
 
-                            
+                            Boom.play();
                             Item.bom[j].BombActivate = true;
                             break;
                         }
@@ -472,13 +534,13 @@ void game::run()
                     }
                     else {
                         if(En.E[i].SelectE==0)
-                            ui.HPchange(-0.007);
+                            ui.HPchange(-0.01);
                         
                         if (En.E[i].SelectE == 1)
                             ui.HPchange(-0.005);
 
                         if (En.E[i].SelectE == 2)
-                            ui.HPchange(-0.01);
+                            ui.HPchange(-0.07);
                     }
 
                     /// if Ememy dead
@@ -507,7 +569,7 @@ void game::run()
                         En.E[i].EnemyState = false;
                         
                         // random drop item
-                        int randNum = rand() % 15;
+                        int randNum = rand() % 30;
                             Item.randomItem(randNum, En.E[i].setEneny.getPosition());
 
                         
@@ -521,7 +583,7 @@ void game::run()
 
             }
 
-
+            
 
 
 
@@ -589,6 +651,7 @@ void game::run()
                                 if (En.E[i].setEneny.getGlobalBounds().intersects(Item.bom[j].BOOM.getGlobalBounds()) == true) {
 
                                     //En.E[i].EnemyState = false;
+                                    Item.bom[i].getItemState = false;
                                     En.E[i].hpEnemy = 0;
                                 }
                             }
@@ -626,46 +689,27 @@ void game::run()
 
             if (ui.HPplayer <= 0) {//////////////////////////////////////////////////////////////
                 SelectMenu = 2;
+                getItem.setVolume(0);
+                Boom.setVolume(0);
+                walk.setVolume(0);
+                shot.setVolume(0);
                 window.clear();
             }
 
             if (pauseMenu == true) {
-                window.draw(pauseText);
-
-                
-
-                if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-                    if (pauseText.getGlobalBounds().intersects(MousePointer.getGlobalBounds())) {
-                        SelectMenu = 0;
-
-                    }
-                }
-
+                window.draw(ui.quitButton);
             }
 
             window.display();
         }
 
         else if(SelectMenu == 3){
-        
-            
+
             window.clear();
-            
-            
             ui.showTopScore(&window);
             window.display();
         }
 
-        
-        
-
-        
-
-        
-
-
-
-       
     }
    
 }

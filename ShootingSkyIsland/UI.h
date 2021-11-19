@@ -20,7 +20,11 @@ public:
 	
 	sf::RectangleShape ExitButton;
 	
+	sf::RectangleShape quitButton;
+
 	sf::Vector2u buttonSize;
+
+
 
 	/// PlayerStatus
 	sf::RectangleShape HP;

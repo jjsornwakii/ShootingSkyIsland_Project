@@ -53,14 +53,15 @@ void item::initItem() {
 
 
 void item::animationItem() {
-	for (int i = 0; i < 3; i++) {
-		if (bom[i].itemState == true&&bom[i].planState==true) {
+	for (int i = 0; i < 4; i++) {
+		if (bom[i].itemState == true && bom[i].planState == true) {
 			bom[i].getTime = bom[i].bombCl.getElapsedTime().asSeconds();
-
+			std::cout << i << std::endl;
+		
 			if (bom[i].getTime >= 1) {
-				
+				std::cout << "Hello" << std::endl;
 				bom[i].getTime = bom[i].bombCl.restart().asSeconds();
-				bom[i].currentX++;
+				//bom[i].currentX =!bom[i].currentX;
 				bom[i].bomb.setTextureRect(sf::IntRect(0, 0, bombSize.x / 2 * bom[i].currentX, bombSize.y));
 
 			}
@@ -92,7 +93,7 @@ void item::randomItem(int n,sf::Vector2f Pos) {
 		}
 		else if (n >= 5 && n <= 6) {
 			for (int i = 0; i < 3; i++) {
-				if (bom[i].itemState == false) {
+				if (bom[i].itemState == false && bom[i].getItemState == false) {
 					bom[i].itemState = true;
 					bom[i].bomb.setPosition(Pos);
 					break;
@@ -145,7 +146,7 @@ void item::BOOMBAYAH(int i , sf::Vector2f pos) {
 }
 
 void item::BombAnimation() {
-	for (int i = 0; i < 2; i++) {
+	for (int i = 0; i < 3; i++) {
 		if (bom[i].planState == true) {
 			if (bom[i].getTime >= 1) {
 				bom[i].currentX = !bom[i].currentX;

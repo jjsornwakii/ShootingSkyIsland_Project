@@ -1,54 +1,11 @@
-﻿  game.cpp
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(75,84): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(75,55): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(96,65): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(96,41): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(103,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(204,73): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(204,49): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(211,27): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(469,74): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(475,47): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(478,47): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(481,46): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(502,91): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(502,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(583,103): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
-C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\game.cpp(585,100): warning C4244: '=': conversion from 'sf::Int32' to 'float', possible loss of data
+﻿  UI.cpp
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(44,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(91,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(304,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(307,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\siwak\source\repos\GameDev2\ShootingSkyIsland\UI.cpp(310,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating code
-  1 of 321 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+  2 of 339 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
